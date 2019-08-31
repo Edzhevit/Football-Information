@@ -43,101 +43,11 @@ One Player may have only one Picture, and one Picture may have many Players.
 ## Data Import
 Use the provided files to populate the database with data. Import all the information from those files into the database.
 You are not allowed to modify the provided files.
-ANY INCORRECT data should be ignored and a message “Invalid {picture/team/player}” should be printed.
+ANY INCORRECT data should be ignored and a message
+“Invalid {picture/team/player}” should be printed.
 ##### NOTE: An incorrect data input is an input which is missing required fields. 
 When the import is finished
  “Successfully imported {picture/team/player}- {url/name/firstName lastName}”
-
-
-
-
-### XML Import
-The Football info have prepared some XML data for you to import.
-
-pictures.xml
-<pictures>
-    <picture>
-        <url>google.pictures#1</url>
-    </picture>
-    <picture>
-    </picture>
-    <picture>
-        <url>google.pictures#2</url>
-    </picture>
-<pictures/>
-Successfully imported picture - google.pictures#1
- 
-Invalid picture
-
-Successfully imported picture - google.pictures#2
-
-teams.xml
-<teams>
-    <team>
-        <name>West Valley</name>
-        <picture>
-            <url>fc_pictures_1</url>
-        </picture>
-    </team>
-    <team>
-        <name>VeeeeeeeeeeeeryLoooooooooooooooongName</name>
-        <picture>
-            <url>noPicture</url>
-        </picture>
-    </team>
-    <team>
-        <name>Samurai</name>
-        <picture>
-            <url>invalidURL</url>
-        </picture>
-    </team>
-    . . .
-<teams>
-
-Successfully imported - West Valley
-
-Invalid team
-
-Invalid team
-
-### JSON Import
-
-Player (players.json)
-players.json
-[
-  {
-    "firstName": "Kiril",
-    "lastName": "Despodov",
-    "number": 32,
-    "salary": 150000.00,
-    "position": "Invalid",
-    "picture": {
-      "url": "google.pictures#1"
-    },
-    "team": {
-      "name": "West Valley",
-      "picture": {
-        "url": "fc_pictures_1"
-      }
-    }
-  },
-  {
-    "firstName": "Christian",
-    "lastName": "Rodrigues",
-    "number": 121,
-    "salary": 100000.00,
-    "position": "RB",
-    "picture": {
-      "url": "google.pictures#2"
-    }
-    . . .
-Invalid player
-Invalid player
-Invalid player
-Successfully imported player: Rubin Star
-Successfully imported player: Serj Smokey
-
-
 
 
 ## Data Export
@@ -145,6 +55,7 @@ Get ready to export the data you’ve imported in the previous task. Here you wi
 #### Export all players North Hub
 Export all players which are playing in North Hub:
 * Extract from the database, the name of the team and information about the player ordered by id.
+
 "Team: {Name}
 
 Player name: {playerOne firstName} {playerOne lastName} - {playerOne position}
