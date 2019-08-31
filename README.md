@@ -10,12 +10,14 @@ The firm has hired you as their application developer, to implement the database
 There are 3 main models that the Football info database application should contain in its functionality.
 Design them in the most appropriate way, considering the following data constraints:
 ### Picture
-id – integer number, primary identification field.
-url – a string (required).
-Team
+* id – integer number, primary identification field.
+* url – a string (required).
+
+### Team
 * id – integer number, primary identification field. 
 * name – a string (required) between 3 and 20 characters.
 * picture – a Picture entity (required).
+
 ### Player
 * id – integer number, primary identification field.
 * first_name – a string (required).
@@ -30,8 +32,11 @@ Team
 
 #### Relationships
 The Football info decided to give you a little hint about the more complex relationships in the database, so that you can implement it correctly.
+
 One Team may have only one Picture, and one Picture may have many Teams.
+
 One Team may have many Players, and one Player may be appointed to only one Team.
+
 One Player may have only one Picture, and one Picture may have many Players.
 
 
@@ -49,28 +54,24 @@ When the import is finished
 ### XML Import
 The Football info have prepared some XML data for you to import.
 
-Picture (pictures.xml)
 pictures.xml
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <pictures>
     <picture>
         <url>google.pictures#1</url>
     </picture>
     <picture>
-
     </picture>
     <picture>
         <url>google.pictures#2</url>
     </picture>
-    . . .
 <pictures/>
 Successfully imported picture - google.pictures#1
+ 
 Invalid picture
+
 Successfully imported picture - google.pictures#2
 
-Team (teams.xml)
 teams.xml
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <teams>
     <team>
         <name>West Valley</name>
@@ -94,7 +95,9 @@ teams.xml
 <teams>
 
 Successfully imported - West Valley
+
 Invalid team
+
 Invalid team
 
 ### JSON Import
@@ -141,20 +144,30 @@ Successfully imported player: Serj Smokey
 Get ready to export the data you’ve imported in the previous task. Here you will have some pretty complex database querying. Export the data in the formats specified below.
 #### Export all players North Hub
 Export all players which are playing in North Hub:
-Extract from the database, the name of the team and information about the player ordered by id.
+* Extract from the database, the name of the team and information about the player ordered by id.
 "Team: {Name}
+
 Player name: {playerOne firstName} {playerOne lastName} - {playerOne position}
+
 Number: {playerOne number}
+
 Player name: {playerTwo firstName} {playerTwo lastName} - {playerTwo position}
+
 Number: {playerTwo number} 
+
 . . . "
 
 #### Export players with salary bigger than 100000
 Export all the players with salary bigger than 100000.
-Export the player’s full name, number, salary and team name order by salary descending.
+* Export the player’s full name, number, salary and team name order by salary descending.
+
 "Player name: {firstName} {lastName} 
+
 Number: {player number}
+
 Salary: {player salary}
+
 Team: {team name}
+
 . . ."
 
