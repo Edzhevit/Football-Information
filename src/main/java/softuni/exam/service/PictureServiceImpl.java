@@ -3,6 +3,7 @@ package softuni.exam.service;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import softuni.exam.domain.dtos.xml.PictureDto;
 import softuni.exam.domain.dtos.xml.PictureRootDto;
 import softuni.exam.domain.entities.Picture;
@@ -15,6 +16,7 @@ import java.io.IOException;
 
 
 @Service
+@Transactional
 public class PictureServiceImpl implements PictureService {
 
     private final static String PICTURE_XML_FILE_PATH =

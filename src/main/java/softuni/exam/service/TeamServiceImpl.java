@@ -3,7 +3,7 @@ package softuni.exam.service;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import softuni.exam.domain.dtos.xml.PictureDto;
+import org.springframework.transaction.annotation.Transactional;
 import softuni.exam.domain.dtos.xml.TeamDto;
 import softuni.exam.domain.dtos.xml.TeamRootDto;
 import softuni.exam.domain.entities.Picture;
@@ -18,6 +18,7 @@ import javax.xml.bind.JAXBException;
 import java.io.IOException;
 
 @Service
+@Transactional
 public class TeamServiceImpl implements TeamService {
 
     private final static String TEAMS_XML_FILE_PATH =
